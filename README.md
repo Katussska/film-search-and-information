@@ -4,6 +4,10 @@
 
 Welcome to MovieHub, your go-to resource for exploring information about movies. This web application leverages the IMDb API to provide users with a convenient way to search for films based on title, director, or actor.
 
+## Current Progress
+
+You can find the current progress of the project on the [MovieHub project page](https://katussska.github.io/MovieHub/).
+
 ## Features
 
 - Search for movies by title, director, or actor.
