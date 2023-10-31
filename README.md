@@ -1,6 +1,6 @@
 # MovieHub - Film Guide (!in progress!)
 
-**Note: This project is currently under construction.**
+**Note: This project is a school assignment and may not have full production-level features.**
 
 Welcome to MovieHub, your go-to resource for exploring information about movies. This web application leverages the IMDb API to provide users with a convenient way to search for films based on title, director, or actor.
 
