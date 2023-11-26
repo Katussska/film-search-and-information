@@ -1,37 +1,49 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <title>MovieHub - Movie Guide</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Connect external CSS file for styling -->
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/png" href="/favicon.png"/>
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Viga&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<header>
-    <div class="logo">MovieHub</div>
-    <input type="text" class="search-box" placeholder="Search...">
-    <div class="user-actions">
-        <button class="login-button">Log In</button>
-    </div>
-</header>
+<div class="background"></div>
 
 <nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Search Results</a></li>
-        <li><a href="#">My List</a></li>
-        <li><a href="#">About Us</a></li>
-    </ul>
+    <div class="logo">
+        <h3>MovieHub</h3>
+    </div>
+
+    <div class="search-bar">
+        <label>
+            <input type="text" placeholder="Search">
+        </label>
+    </div>
 </nav>
 
-<section class="search-results">
-    <!-- Display search results here -->
-</section>
+<div id="trends">
+    <h2 class="titleTrends">Trending films</h2>
+    <div id="container">
+        <div id="back" onclick="moveLeft()">
+            <img src="public/arrowL.png" alt="back">
+        </div>
+        <div id="trendFilms">
 
-<section class="movie-details">
-    <!-- Display detailed information about the selected movie -->
-</section>
+        </div>
+        <div id="forward" onclick="moveRight()">
+            <img src="public/arrowR.png" alt="forward">
+        </div>
+    </div>
+</div>
 
-<footer>
-    &copy; 2023 MovieHub. All rights reserved.
-</footer>
+<script type="module" src="main.js"></script>
+<script type="module" src="trends.js"></script>
 </body>
 </html>
+
+
