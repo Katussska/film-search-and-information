@@ -4,12 +4,13 @@
 }
 
 body {
-    background-image: url("public/background.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url("/background.jpg");
     background-position: center;
     backdrop-filter: blur(2px);
     z-index: -1;
     font-family: 'Viga', sans-serif;
-    color: #fef6f8;
+    color: #eae9e9;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -35,7 +36,7 @@ h3 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 h1 {
@@ -45,24 +46,23 @@ h1 {
 .logo {
     display: flex;
     justify-content: left !important;
-    margin: 40px 0 30px 0;
+    margin: 50px 0 30px 0;
 }
-
 
 .search-bar > label > input {
     background: #231f20;
     border: 3px solid #100a0b;
-    color: #fef6f8;
+    color: #fceef2;
     border-radius: 100px;
     height: 40px;
     width: 500px;
     padding: 0 20px;
-    margin-bottom: 20px;
+    margin: 20px 0 20px 0;
     font-size: 20px;
     font-weight: bold;
 }
 
-.search-bar > label > input:focus {
+.search-bar > label > input:hover, .search-bar > label > input:focus {
     outline: none;
     border-color: #68414a;
 }
@@ -71,10 +71,15 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px auto;
+    margin: 120px auto 0 auto;
     width: 1250px;
     height: 600px;
     background: #100a0b;
+    border: 3px solid #231f20;
+}
+
+#trends:hover {
+    border: 3px solid #68414a;
 }
 
 .titleTrends {
@@ -90,6 +95,7 @@ h1 {
 
 #back, #forward {
     padding-bottom: 80px;
+    z-index: 10;
 }
 
 #back {
@@ -100,19 +106,24 @@ h1 {
     padding-left: 20px;
 }
 
-#trendFilms {
-    display: flex;
-    height: 400px;
+.filmsContainer {
+    height: 500px;
     width: 1000px;
     overflow: hidden;
 }
 
-#trendFilms > div {
+#trendFilms {
+    display: flex;
+    transition: transform 0.4s ease;
+    padding-top: 40px
+}
+
+.movie {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 25px;
+    padding: 0 25px;
 }
 
 #trendFilms > div > div {
@@ -124,4 +135,98 @@ h1 {
 
 #trendFilms > div > div > h1 {
     text-align: center;
+}
+
+.movie > img {
+    transition: transform 0.3s ease;
+    padding-top: 20px;
+}
+
+.movie > img:hover {
+    transform: scale(1.1);
+}
+
+#popUp {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.popUpContainer {
+    width: max-content;
+    height: max-content;
+    margin-top: 90px;
+    background: #100a0b;
+    border: 3px solid #68414a;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+}
+
+.cover {
+    margin: 0 30px 30px 0;
+}
+
+.textContainer > h2 {
+    margin: 30px 20px 30px 20px;
+}
+
+.release {
+    margin: 40px 0 20px 0;
+}
+
+.textTitle {
+    font-weight: bolder;
+    font-size: 17px;
+    margin-right: 10px;
+}
+
+.genre {
+    display: flex;
+    align-items: center;
+}
+
+.genreList {
+    margin: 3px 0 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-around;
+}
+
+.description {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 30px;
+    text-align: left;
+}
+
+.description > .textTitle {
+    margin-bottom: 10px;
+}
+
+.chartContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 150px;
+    border: 3px solid black;
 }

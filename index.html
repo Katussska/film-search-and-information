@@ -5,15 +5,13 @@
     <link rel="icon" type="image/png" href="/favicon.png"/>
     <title>MovieHub</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rampart+One&family=Viga&display=swap');
     </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-<div class="background"></div>
-
 <nav>
     <div class="logo">
         <h3>MovieHub</h3>
@@ -21,7 +19,7 @@
 
     <div class="search-bar">
         <label>
-            <input type="text" placeholder="Search">
+            <input id="searchInput" type="text" placeholder="Search">
         </label>
     </div>
 </nav>
@@ -29,20 +27,62 @@
 <div id="trends">
     <h2 class="titleTrends">Trending films</h2>
     <div id="container">
-        <div id="back" onclick="moveLeft()">
-            <img src="public/arrowL.png" alt="back">
+        <div id="back">
+            <img src="/arrowL.png" alt="back">
         </div>
-        <div id="trendFilms">
+        <div class="filmsContainer">
+            <div id="trendFilms">
+                <!-- movies -->
+            </div>
+        </div>
+        <div id="forward">
+            <img src="/arrowR.png" alt="forward">
+        </div>
+        <script type="module" src="main.js"></script>
+    </div>
+</div>
 
+<div id="popUp">
+    <div class="popUpContainer">
+        <div class="top">
+            <div class="cover">
+                <img src="public/oppenhaimer.jpg" alt="cover">
+            </div>
+            <div class="textContainer">
+                <h2>Oppenheimer</h2>
+                <div class="release">
+                    <span class="textTitle">Release date:</span>
+                    <span class="text">2023-07-19</span>
+                </div>
+
+                <div class="genre">
+                    <span class="textTitle">Genre:</span>
+                    <div class="genreList">
+                        <span class="genreText">sci-fi</span>
+                        <span class="text">fantasy</span>
+                        <span class="text">action</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="forward" onclick="moveRight()">
-            <img src="public/arrowR.png" alt="forward">
+        <div class="bottom">
+            <div class="description">
+                <span class="textTitle">Description</span>
+                <span class="text">
+                    The story of J. Robert Oppenheimer's role in the development
+                    of the atomic bomb during World War II.
+                </span>
+            </div>
+            <div class="chartContainer">
+                chart
+            </div>
         </div>
     </div>
 </div>
 
-<script type="module" src="main.js"></script>
 <script type="module" src="trends.js"></script>
+<script type="module" src="main.js" defer></script>
+<script src="chart.js" defer></script>
 </body>
 </html>
 
