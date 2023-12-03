@@ -12,7 +12,7 @@ let currentIndex = 0;
 let maxIndex = slides.length - SLIDES_TO_SHOW;
 let films = document.querySelectorAll('.movie')
 
-await renderFilms("trending films", TRENDING_RESULTS);
+await renderFilms("Trending Films", TRENDING_RESULTS);
 
 function moveRight() {
     if (currentIndex < maxIndex) {
@@ -49,15 +49,15 @@ async function update() {
 document.getElementById('searchInput').addEventListener('keypress', async function (e) {
     if (e.key === 'Enter') {
         const searchTerm = e.target.value;
-        await update();
         let filmResults = await getFilms(searchTerm);
         await renderFilms(searchTerm, filmResults);
+        await update();
     }
 });
 
 document.getElementById('logo').addEventListener("click", async function () {
+    await renderFilms("Trending Films", TRENDING_RESULTS);
     await update();
-    await renderFilms("trending films", TRENDING_RESULTS);
 });
 
 document.getElementById('cancel').addEventListener('click', function () {
