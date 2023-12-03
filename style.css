@@ -43,10 +43,11 @@ h1 {
     font-size: 18px;
 }
 
-.logo {
+#logo {
     display: flex;
     justify-content: left !important;
     margin: 50px 0 30px 0;
+    cursor: pointer;
 }
 
 .search-bar > label > input {
@@ -62,12 +63,13 @@ h1 {
     font-weight: bold;
 }
 
-.search-bar > label > input:hover, .search-bar > label > input:focus {
+.search-bar > label > input:hover,
+.search-bar > label > input:focus {
     outline: none;
     border-color: #68414a;
 }
 
-#trends {
+#films {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -78,11 +80,11 @@ h1 {
     border: 3px solid #231f20;
 }
 
-#trends:hover {
+#films:hover {
     border: 3px solid #68414a;
 }
 
-.titleTrends {
+#titleFilms {
     margin: 20px 0;
     padding-top: 20px;
 }
@@ -94,9 +96,14 @@ h1 {
 }
 
 #back, #forward {
-    padding-bottom: 80px;
+    padding-bottom: 60px;
     z-index: 10;
 }
+
+#back > img, #forward > img {
+    cursor: pointer;
+}
+
 
 #back {
     padding-right: 20px;
@@ -112,7 +119,7 @@ h1 {
     overflow: hidden;
 }
 
-#trendFilms {
+#filmList {
     display: flex;
     transition: transform 0.4s ease;
     padding-top: 40px
@@ -126,20 +133,27 @@ h1 {
     padding: 0 25px;
 }
 
-#trendFilms > div > div {
+#filmList > div > div {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100px;
 }
 
-#trendFilms > div > div > h1 {
+#filmList > div > div > h1 {
     text-align: center;
 }
 
 .movie > img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    width: 200px;
+    height: 320px;
     transition: transform 0.3s ease;
     padding-top: 20px;
+    cursor: pointer;
 }
 
 .movie > img:hover {
@@ -159,7 +173,12 @@ h1 {
     z-index: 100;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .popUpContainer {
+    max-width: 800px;
     width: max-content;
     height: max-content;
     margin-top: 90px;
@@ -172,15 +191,22 @@ h1 {
 
 .top {
     display: flex;
-    width: 100%;
+    margin-bottom: 20px;
+    justify-content: space-between;
 }
 
 .cover {
-    margin: 0 30px 30px 0;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .textContainer > h2 {
-    margin: 30px 20px 30px 20px;
+    margin: 0 20px 30px 0;
+    max-width: 400px;
+    width: max-content;
+    text-align: center;
 }
 
 .release {
@@ -204,18 +230,41 @@ h1 {
     flex-direction: column;
 }
 
+#cancel {
+    width: 40px;
+    height: 40px;
+    background: #100a0b;
+    border-radius: 100%;
+    border: 3px solid #68414a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #eae9e9;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+#cancel:focus {
+    background: #68414a;
+}
+
 .bottom {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .description {
-    width: 300px;
+    max-width: 550px;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-self: left;
     margin-right: 30px;
-    text-align: left;
+    text-align: justify;
 }
 
 .description > .textTitle {
@@ -228,5 +277,5 @@ h1 {
     align-items: center;
     width: 200px;
     height: 150px;
-    border: 3px solid black;
+    margin: -25px -35px;
 }

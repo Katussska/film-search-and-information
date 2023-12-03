@@ -13,7 +13,7 @@
 </head>
 <body>
 <nav>
-    <div class="logo">
+    <div id="logo">
         <h3>MovieHub</h3>
     </div>
 
@@ -24,14 +24,14 @@
     </div>
 </nav>
 
-<div id="trends">
-    <h2 class="titleTrends">Trending films</h2>
+<div id="films">
+    <h2 id="titleFilms">Trending films</h2>
     <div id="container">
         <div id="back">
             <img src="/arrowL.png" alt="back">
         </div>
         <div class="filmsContainer">
-            <div id="trendFilms">
+            <div id="filmList">
                 <!-- movies -->
             </div>
         </div>
@@ -42,48 +42,43 @@
     </div>
 </div>
 
-<div id="popUp">
+<div id="popUp" class="hidden">
     <div class="popUpContainer">
         <div class="top">
             <div class="cover">
-                <img src="public/oppenhaimer.jpg" alt="cover">
+                <img id="popUpPoster" src="public/oppenhaimer.jpg" alt="Movie poster not found">
             </div>
             <div class="textContainer">
-                <h2>Oppenheimer</h2>
+                <h2 id="popUpTitle">Oppenheimer</h2>
                 <div class="release">
                     <span class="textTitle">Release date:</span>
-                    <span class="text">2023-07-19</span>
+                    <span id="releaseDate" class="text">2023-07-19</span>
                 </div>
 
                 <div class="genre">
                     <span class="textTitle">Genre:</span>
-                    <div class="genreList">
-                        <span class="genreText">sci-fi</span>
-                        <span class="text">fantasy</span>
-                        <span class="text">action</span>
+                    <div id="popUpList" class="genreList">
+                        <!-- <span class="genreText">sci-fi</span> -->
                     </div>
                 </div>
             </div>
+            <button id="cancel">X</button>
         </div>
         <div class="bottom">
             <div class="description">
                 <span class="textTitle">Description</span>
-                <span class="text">
+                <span id="description" class="text">
                     The story of J. Robert Oppenheimer's role in the development
                     of the atomic bomb during World War II.
                 </span>
             </div>
-            <div class="chartContainer">
+            <div id="chart" class="chartContainer">
                 chart
             </div>
         </div>
     </div>
 </div>
 
-<script type="module" src="trends.js"></script>
 <script type="module" src="main.js" defer></script>
-<script src="chart.js" defer></script>
 </body>
 </html>
-
-
