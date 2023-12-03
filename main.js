@@ -12,7 +12,7 @@ let currentIndex = 0;
 let maxIndex = slides.length - SLIDES_TO_SHOW;
 let films = document.querySelectorAll('.movie')
 
-renderFilms("trending films", TRENDING_RESULTS);
+await renderFilms("trending films", TRENDING_RESULTS);
 
 function moveRight() {
     if (currentIndex < maxIndex) {
