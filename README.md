@@ -1,4 +1,4 @@
-# MovieHub - Film Guide (!in progress!)
+# MovieHub - Film Guide 
 
 > [!WARNING]
 > Has small bug. For start click on MovieHub logo.
@@ -20,7 +20,7 @@ You can find the current progress of the project on the [MovieHub project page](
 
 To get started with MovieHub, follow these steps:
 
-1. [Clone the repository](https://github.com/your-username/MovieHub.git).
+1. Clone the repository.
 2. Open `index.html` in your preferred web browser.
 3. Start exploring movies!
 
